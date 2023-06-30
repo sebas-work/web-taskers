@@ -1,0 +1,52 @@
+<div class="navbar-layout">
+  <div class="navbar-initial">
+    <div class="navbar-options-layout">
+      <div class="navbar-options">
+        <span onclick="navigate('/webtaskers/404.php')">INICIO</span>
+        <span onclick="navigate('/webtaskers')">NOSOTROS</span>
+        <span>SERVICIOS</span>
+        <span>PROYECTOS</span>
+        <span>CONTACTO</span>
+      </div>
+    </div>
+
+    <div class="navbar-social-media">
+      <div class="navbar-social-media-item">
+        <i
+          class="bx bxl-linkedin bx-md navbar-item-linkedin"
+          title="Inicio"
+          onclick="openSocialMedia('https://www.linkedin.com/company/taskers-per%C3%BA/')"
+        >
+        </i>
+      </div>
+      <div class="navbar-social-media-item">
+        <i
+          onclick="openSocialMedia('https://www.instagram.com/taskersperu/')"
+          class="bx bxl-instagram bx-md navbar-item-instagram"
+        >
+        </i>
+      </div>
+      <div class="navbar-social-media-item">
+        <i
+          onclick="openSocialMedia('https://www.facebook.com/profile.php?id=100089592391679')"
+          class="bx bxl-facebook bx-md navbar-item-facebook"
+        >
+        </i>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-icon" onclick="toggleExpandNavbar()">
+    <i class="bx bx-menu bx-md"></i>
+  </div>
+</div>
+
+<script>
+  function toggleExpandNavbar() {
+    $button = document.querySelector(".navbar-initial");
+    $options = document.querySelector(".navbar-options-layout");
+    $socialMedia = document.querySelector(".navbar-social-media");
+    $button.classList.toggle("navbar-expand");
+    $options.classList.toggle("navbar-options-layout-show");
+    $socialMedia.classList.toggle("navbar-social-media-show");
+  }
+</script>

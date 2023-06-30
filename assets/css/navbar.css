@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-icon {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 800;
+}
+
+.navbar-icon:hover {
+  cursor: pointer;
+}
+
+.navbar-initial {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  overflow: hidden;
+  background-color: #94b8d7;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  transition: all ease .5s;
+  display: flex;
+  z-index: 800;
+}
+
+.navbar-options-layout {
+  opacity: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: all ease .5s;
+  z-index: 800;
+}
+
+.navbar-options-layout-show {
+  opacity: 1;
+}
+
+.navbar-expand {
+  width: 100vh;
+  height: 100vh;
+  transform: translate(55%, -50%);
+}
+
+.navbar-options {
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-options span {
+  color: #0e3a6b;
+  font-weight: 500;
+  font-size: 4vh;
+  transition: all ease .5s;
+  margin-bottom: .5rem;
+}
+
+.navbar-options span:hover {
+  cursor: pointer;
+  font-weight: 600;
+  color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+.navbar-social-media{
+  display: none;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease .5s;
+  padding-right: 1rem;
+  z-index: 900;
+}
+
+.navbar-social-media-show{
+  opacity: 1;
+}
+
+.navbar-social-media-item i{
+  color: white;
+  margin-left: 1rem;
+  padding: .4rem;
+  border-radius: 100%;
+
+}
+
+
+.navbar-item-instagram {
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+.navbar-item-facebook {
+  background-color: #1977f3;
+}
+
+.navbar-item-linkedin {
+  background-color: #0066c8;
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar-initial {
+    top: 3.5rem;
+  }
+
+  .navbar-icon {
+    top: 3.5rem;
+  }
+
+  .navbar-expand {
+    right: 0;
+    top: 0;
+    width: 100vw;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .navbar-options-layout{
+    width: 100%;
+  }
+
+  .navbar-social-media{
+    display: flex;
+  }
+
+}

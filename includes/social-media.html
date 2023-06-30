@@ -1,0 +1,59 @@
+<div class="social-media">
+  <div class="social-media-item">
+    <i id="linkedin"
+      class="bx bxl-linkedin bx-md"
+      onclick="openSocialMedia('https://www.linkedin.com/company/taskers-per%C3%BA/')"
+      onmouseover="animationSocialMedia(this)"
+      onmouseout="animationSocialMedia(this)"
+    >
+    </i>
+  </div>
+  <div class="social-media-item">
+    <i id="instagram"
+      onclick="openSocialMedia('https://www.instagram.com/taskersperu/')"
+      class="bx bxl-instagram bx-md"
+      onmouseover="animationSocialMedia(this)"
+      onmouseout="animationSocialMedia(this)"
+    >
+    </i>
+  </div>
+  <div class="social-media-item">
+    <i id="facebook"
+      onclick="openSocialMedia('https://www.facebook.com/profile.php?id=100089592391679')"
+      class="bx bxl-facebook bx-md"
+      onmouseover="animationSocialMedia(this)"
+      onmouseout="animationSocialMedia(this)"
+    >
+    </i>
+  </div>
+  <div class="social-media-item">
+    <i id="whatsapp"
+      onclick="openSocialMedia('https://wa.me/51933301844?_blank')"
+      class="bx bxl-whatsapp bx-md "
+      onmouseover="animationSocialMedia(this)"
+      onmouseout="animationSocialMedia(this)"
+    >
+    </i>
+  </div>
+</div>
+
+<div class="social-media-item social-media-simple">
+  <i
+    onclick="openSocialMedia('https://wa.me/51933301844?_blank')"
+    class="bx bxl-whatsapp bx-md item-whatsapp"
+  >
+  </i>
+</div>
+
+<script>
+  function animationSocialMedia($element){
+    const id = $element.id;
+    const classElement = `item-${id}`;
+    $element.classList.toggle(classElement);
+    $element.classList.toggle('bx-tada');
+  }
+
+  function openSocialMedia(url){
+    window.open(url, '_blank');
+  }
+</script>

@@ -1,0 +1,38 @@
+<div
+  id="transition-layout-open"
+  class="transition-layout transition-layout-show"
+>
+  <div
+    id="transition-wave-top-open"
+    class="transition-wave-top transition-wave-top-show"
+  >
+    <div class="transition-part-layout">
+      <div class="transition-part-block"></div>
+      <img src="assets/svg/wave-bottom.svg" />
+    </div>
+  </div>
+
+  <div
+    id="transition-wave-bottom-open"
+    class="transition-wave-bottom transition-wave-bottom-show"
+  >
+    <div class="transition-part-layout">
+      <img src="assets/svg/wave-top.svg" />
+      <div class="transition-part-block"></div>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', function() {
+    $waveTop = document.getElementById("transition-wave-top-open");
+    $waveTop.classList.toggle("transition-wave-top-show");
+    $waveBottom = document.getElementById("transition-wave-bottom-open");
+    $waveBottom.classList.toggle("transition-wave-bottom-show");
+
+
+    setTimeout(() => {
+      $transitionLayout = document.getElementById("transition-layout-open");
+      $transitionLayout.classList.toggle("transition-layout-show");
+    }, 800);
+  });
+</script>
